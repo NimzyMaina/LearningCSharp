@@ -7,28 +7,34 @@ namespace HelloWorldApp
     {
         static void Main(string[] args)
         {
-            WriteLine("Enter an number");
-            int input = 0;
-            Int32.TryParse(ReadLine(), out input);
+            WriteGreeting(TimeOfDay.Evening);
+        }
 
-            switch (input)
+        static void WriteGreeting(TimeOfDay timeOfDay)
+        {
+            switch (timeOfDay)
             {
-                case 1:
-                    WriteLine("You entered 1");
+                case TimeOfDay.Morning:
+                    WriteLine("Good morning!");
                     break;
-                case 2:
-                    WriteLine("You entered 2");
+                case TimeOfDay.Afternoon:
+                    WriteLine("Good afternoon!");
                     break;
-                case 3:
-                    WriteLine("You entered 3");
-                    break;
-                case 4:
-                    WriteLine("You entered 4");
+                case TimeOfDay.Evening:
+                    WriteLine("Good evening!");
                     break;
                 default:
-                    WriteLine("Out of range");
+                    WriteLine("Hello!");
                     break;
             }
         }
+
+        public enum TimeOfDay
+        {
+            Morning = 0,
+            Afternoon = 1,
+            Evening = 2
+        }
+
     }
 }
