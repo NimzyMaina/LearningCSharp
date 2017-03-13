@@ -1,4 +1,5 @@
 ﻿using System;
+using static HelloWorldApp.App;
 using static System.Console;
 
 namespace HelloWorldApp
@@ -27,13 +28,6 @@ namespace HelloWorldApp
                     WriteLine("Hello!");
                     break;
             }
-        }
-
-        public enum TimeOfDay
-        {
-            Morning = 0,
-            Afternoon = 1,
-            Evening = 2
         }
 
     }
